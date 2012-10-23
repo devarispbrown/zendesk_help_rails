@@ -1,4 +1,6 @@
 ZendeskHelpRails::Application.routes.draw do
+  devise_for :users
+
   #get "pages/help"
   root to: 'pages#help'
 
