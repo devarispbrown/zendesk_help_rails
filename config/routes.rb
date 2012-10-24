@@ -1,4 +1,6 @@
 ZendeskHelpRails::Application.routes.draw do
+  get "help/tickets"
+
   devise_for :users
 
   #get "pages/help"
