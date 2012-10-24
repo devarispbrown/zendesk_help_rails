@@ -12,8 +12,8 @@
 			<%= label_tag :subject %>
 			<%= text_field_tag :subject, nil, class: "input-xxlarge" %>
 
-			<%= label_tag :body %>
-			<%= text_area_tag :body, nil, :cols=> 50, :rows=> 10%>
+			<%= label_tag :body, 'Please Describe Your Issue' %>
+			<%= text_area_tag :body, nil, :rows => 10, class: "input-xxlarge" %>
 
 			<p><%= submit_tag "Send Your Question", class: "btn btn-large btn-primary" %></p>
 		<% end %>
