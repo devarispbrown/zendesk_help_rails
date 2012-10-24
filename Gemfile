@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'zendesk_api'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'json'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
