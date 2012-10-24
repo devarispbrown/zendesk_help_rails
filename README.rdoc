@@ -3,3 +3,5 @@
 This Rails application is a simple form that creates a new ticket with a new requester. On form submission success, it will create a ticket in the Zendesk backend.
 
 When that user logs into their account, they will be able to view all the tickets they've submitted.
+
+To get this to run locally make sure you set environment variables for ZD_URL, ZD_USER, ZD_PASS.
