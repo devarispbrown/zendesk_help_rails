@@ -13,4 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+<<<<<<< Updated upstream
+=======
+//= require handlebars-1.0.rc.1.js
+//= require ember-1.0.0-pre.2.js
+>>>>>>> Stashed changes
 //= require_tree .
+//= require_self
+
+var HelpCenter = Em.Application.create({
+  rootElement: '.container'
+});
+
+HelpCenter.WelcomeView = Em.View.extend({
+  templateName: 'welcome'
+});
+
+$(function() {  
+  HelpCenter.WelcomeView.create().append();
+});

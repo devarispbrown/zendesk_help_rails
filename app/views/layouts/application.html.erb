@@ -6,12 +6,19 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
+  <%= ember_template 'welcome' %>
 </head>
 <body>
+<<<<<<< Updated upstream
 	<%= render 'layouts/header' %>
 	<div class="container">
 		<%= render 'layouts/messages' %>
 		<%= yield %>
 	</div>
+=======
+  <%= render 'layouts/header' %>
+  <div class="container">
+  </div>
+>>>>>>> Stashed changes
 </body>
 </html>
