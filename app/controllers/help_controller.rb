@@ -16,6 +16,9 @@ class HelpController < ApplicationController
   		config.logger = Logger.new(STDOUT)
 	end
 
-	@tickets = client.search(:query => "requester: #{@user}")
+	@tickets = client.search(:query => "requester:#{@user}")
   end
+
+  def details
+    @id = params[:id]
 end

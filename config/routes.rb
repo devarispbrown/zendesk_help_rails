@@ -3,10 +3,11 @@ ZendeskHelpRails::Application.routes.draw do
 
   devise_for :users
 
-  #get "pages/help"
   root to: 'pages#help'
 
   post "pages/success"
+
+  match 'tickets/:id' => 'help#details', :as => :details
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
