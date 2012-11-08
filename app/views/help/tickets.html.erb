@@ -1,6 +1,21 @@
 <h1>My Tickets</h1>
 <h2>Fetching Tickets for <%= @user %></h2>
+<table class="table table-hover">
+  <thead>
+    <th>ID</th>
+    <th>Subject</th>
+    <th>Priority</th>
+    <th>Last Updated</th>
+  </thead>
+  <tbody>
+    <% @tickets.each do |ticket| %>
+    <tr>
+      <td><%= link_to ticket.id, details_path(ticket.id) %></td>
+      <td><%= ticket.subject %></td>
+      <td><%= ticket.priority %></td>
+      <td><%= ticket.updated_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<% @tickets.each do |ticket| %>
-	<li><%= ticket.id %> || <%= ticket.status %> || <%= ticket.subject %></li>
-<% end %>

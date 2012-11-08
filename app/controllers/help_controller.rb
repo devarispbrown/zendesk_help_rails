@@ -21,4 +21,5 @@ class HelpController < ApplicationController
 
   def details
     @id = params[:id]
+  end
 end
