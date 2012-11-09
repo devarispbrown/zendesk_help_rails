@@ -12,7 +12,8 @@
 </div>
 <div class="row">
 	<div class="span6">
-		<ul>
+		<h2>Previous Comments</h2>
+		<ul class = "comments_list">
 		<% @comments.each do |comment| %>
 			<li><%= comment.body %></li>
 		<% end %>
