@@ -3,17 +3,31 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_tag(pages_success_path) do %>
-			<%= label_tag :full_name, 'Full Name' %>
-			<%= text_field_tag :full_name, nil, class: "input-xxlarge"%>
+			<% if user_signed_in? %>
+				<%= label_tag :email %>
+				<%= email_field_tag :email, current_user.email, class: "input-xxlarge" %>
 
-			<%= label_tag :email %>
-			<%= email_field_tag :email, nil, class: "input-xxlarge" %>
+				<%= label_tag :subject %>
+				<%= text_field_tag :subject, nil, class: "input-xxlarge" %>
 
-			<%= label_tag :subject %>
-			<%= text_field_tag :subject, nil, class: "input-xxlarge" %>
+				<%= label_tag :body, 'Please Describe Your Issue' %>
+				<%= text_area_tag :body, nil, :rows => 10, class: "input-xxlarge" %>
 
-			<%= label_tag :body, 'Please Describe Your Issue' %>
-			<%= text_area_tag :body, nil, :rows => 10, class: "input-xxlarge" %>
+				<%= label_tag :game, 'Select Your Game' %>
+				<%= select_tag :game, options_from_collection_for_select(@game, "id", "name"), :prompt => "Select something" %>
+			<% else %>
+				<%= label_tag :full_name, 'Full Name' %>
+				<%= text_field_tag :full_name, nil, class: "input-xxlarge"%>
+
+				<%= label_tag :email %>
+				<%= email_field_tag :email, nil, class: "input-xxlarge" %>
+
+				<%= label_tag :subject %>
+				<%= text_field_tag :subject, nil, class: "input-xxlarge" %>
+
+				<%= label_tag :body, 'Please Describe Your Issue' %>
+				<%= text_area_tag :body, nil, :rows => 10, class: "input-xxlarge" %>
+			<% end %>
 
 			<p><%= submit_tag "Send Your Question", class: "btn btn-large btn-primary" %></p>
 		<% end %>
