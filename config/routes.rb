@@ -7,7 +7,11 @@ ZendeskHelpRails::Application.routes.draw do
 
   post "pages/success"
 
-  match 'tickets/:id' => 'help#details', :as => :details
+  get 'tickets/:id' => 'help#details', :as => :details
+
+  post 'tickets/:id' => 'help#comments', :as => :comments
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
