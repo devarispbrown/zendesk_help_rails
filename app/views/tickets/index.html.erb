@@ -9,12 +9,12 @@
   </thead>
   <tbody>
     <% @tickets.each do |ticket| %>
-    <tr>
-      <td><%= link_to ticket.id, details_path(ticket.id) %></td>
-      <td><%= ticket.subject %></td>
-      <td><%= ticket.priority %></td>
-      <td><%= ticket.updated_at %></td>
-    </tr>
+      <tr>
+        <td><%= link_to ticket.id, ticket_path(ticket.id) %></td>
+        <td><%= ticket.subject %></td>
+        <td><%= ticket.priority %></td>
+        <td><%= ticket.updated_at %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>

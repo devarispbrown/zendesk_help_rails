@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="span6 offset3">
-		<%= form_tag(pages_success_path) do %>
+		<%= form_tag(tickets_path) do %>
 			<% if user_signed_in? %>
 				<%= label_tag :email %>
 				<%= email_field_tag :email, current_user.email, class: "input-xxlarge" %>
