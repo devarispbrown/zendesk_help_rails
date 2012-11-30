@@ -21,8 +21,7 @@ class TicketsController < ApplicationController
   end
 
   def index
-    @user = current_user.email
-    @tickets = client.search(:query => "requester:#{@user}")
+    @tickets = client.tickets(current_user.email)
   end
 
   def show
@@ -45,7 +44,7 @@ class TicketsController < ApplicationController
 
   def create_ticket
     options = {:subject => params[:subject], :comment => { :value => params[:body] }, :requester => { :email => @email }}
-    if name
+    if @game_name
       options[:custom_fields] = {:id => "21833683", :value => @game_name}
     else
       options[:requester][:name] = params[:full_name]
