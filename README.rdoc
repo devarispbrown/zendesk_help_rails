@@ -4,7 +4,7 @@ This Rails application is a simple form that creates a new ticket with a new req
 
 To get this to run locally make sure you set environment variables for ZD_URL, ZD_USER, ZD_PASS.
 
-##On Mac
+##On Mac##
 
 ```
 export ZD_URL='https://example.zendesk.com/api/v2'
@@ -12,7 +12,7 @@ export ZD_USER='user@example.com'
 export ZD_PASS='password'
 ```
 
-##On Windows
+##On Windows##
 
 ```
 set ZD_URL='https://example.zendesk.com/api/v2'
@@ -22,7 +22,7 @@ set ZD_PASS=password
 
 This example also uses an external DB to pull in game information to populate a custom field for logged in users. This field could be anything, but you need to change the field id in the code so it gets properly submitted with the ticket request. Create a database.yml file in the app/config folder with your database settings and load the schema.
 
-## Example database.yml
+## Example database.yml ##
 
 ```
 development:
@@ -43,7 +43,7 @@ production:
   host: localhost
 ```
 
-## Create database and load schema
+## Create database and load schema ##
 
 ```
 rake db:create
