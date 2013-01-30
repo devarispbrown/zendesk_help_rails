@@ -4,7 +4,7 @@ This Rails application is a simple form that creates a new ticket with a new req
 
 To get this to run locally make sure you set environment variables for ZD_URL, ZD_USER, ZD_PASS.
 
-## On Mac
+##On Mac
 
 ```
 export ZD_URL='https://example.zendesk.com/api/v2'
@@ -12,7 +12,7 @@ export ZD_USER='user@example.com'
 export ZD_PASS='password'
 ```
 
-## On Windows
+##On Windows
 
 ```
 set ZD_URL='https://example.zendesk.com/api/v2'
@@ -54,7 +54,7 @@ In tickets_controller.rb change the following line to match your custom field id
 
 ```
 if @game_name
-      options[:custom_fields] = {:id => "21833683", :value => @game_name}
+  options[:custom_fields] = {:id => "21833683", :value => @game_name}
 ```
 
 If you have any questions on setup or the code please email <api@zendesk.com> and we'll try to help troubleshoot. Hope this helps!
