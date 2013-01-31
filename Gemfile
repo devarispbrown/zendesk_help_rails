@@ -29,6 +29,8 @@ gem 'json'
 
 group :test do
   gem 'minitest-rails'
+  gem 'guard-minitest'
+  gem 'rb-fsevent', '~> 0.9.1'
 end
 
 group :production do

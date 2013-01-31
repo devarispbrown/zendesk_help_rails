@@ -4,10 +4,9 @@ require 'json'
 class TicketsController < ApplicationController
   def new
     if user_signed_in?
-      @profile = Profile.where(:email => current_user.email).first
-
-      @game = if @profile
-        Game.where(:profile_id => @profile.id).all
+      #@profile = Profile.where(:email => current_user.email).first
+      if @profile = Profile.where(:email => current_user.email).first
+        @game = @profile.games
       else
         []
       end
